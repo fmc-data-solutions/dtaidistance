@@ -35,7 +35,7 @@ c_args = {
     # Xpreprocessor is required for the built-in CLANG on macos, but other
     # installations of LLVM don't seem to be bothered by it (although it's
     # not required.
-    'unix': ['-Xpreprocessor', '-fopenmp',
+    'unix': ['-Xpreprocessor', '-fopenmp', '-std=c99',
              '-I'+str(dtaidistancec_path)],
     'msvc': ['/openmp', '/Ox', '/fp:fast', '/favor:INTEL64', '/Og',
              '/I'+str(dtaidistancec_path)],
